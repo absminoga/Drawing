@@ -9,6 +9,16 @@
   font-style: normal;
   font-weight: 400;
 }
+@font-face {
+  font-family: 'Hursheys';
+  src:  url("../fonts/Hursheys/hursheys2.eot");
+  src:  url("../fonts/Hursheys/hursheys2.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/Hursheys/Hursheys.woff") format("woff"),
+        url("../fonts/Hursheys/hursheys2.ttf") format("truetype"),
+        url('../fonts/Hursheys/Hursheys.svg#Hursheys') format('svg');
+  font-style: normal;
+  font-weight: 400;
+}
 
 @font-face {
   font-family: 'FontAwesome';
