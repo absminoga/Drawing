@@ -131,8 +131,12 @@ input {
   padding-bottom: calc(40px + 7vw);
   width: 100%; }
 
+body {
+  background-image: url(/img/mountains-4743678.jpg);
+  background-size: cover; }
+
 .section_one {
-  letter-spacing: 1.5px; }
+  width: 100%; }
   .section_one .container {
     display: -webkit-box;
     display: -webkit-flex;
@@ -146,8 +150,7 @@ input {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
-    height: 100vh;
-    background-color: black; }
+    height: 100vh; }
     .section_one .container .wrapper {
       display: -webkit-box;
       display: -webkit-flex;
@@ -166,7 +169,7 @@ input {
       -webkit-justify-content: center;
           -ms-flex-pack: center;
               justify-content: center;
-      width: 1000px;
+      width: 1100px;
       height: 80vh;
       background-color: white;
       -webkit-flex-wrap: unset;
@@ -174,14 +177,14 @@ input {
               flex-wrap: unset;
       border-radius: 20px; }
       .section_one .container .wrapper .block_canvas {
-        width: 800px;
+        width: 850px;
         height: 100%;
-        border: 1px solid black; }
+        border-right: 1px solid black; }
         .section_one .container .wrapper .block_canvas canvas {
           width: 100%;
           height: 100%; }
       .section_one .container .wrapper .block_control {
-        width: 200px;
+        width: 300px;
         height: 100%;
         display: -webkit-box;
         display: -webkit-flex;
@@ -191,16 +194,16 @@ input {
         -webkit-align-items: center;
             -ms-flex-align: center;
                 align-items: center;
-        -webkit-box-pack: start;
-        -webkit-justify-content: flex-start;
-            -ms-flex-pack: start;
-                justify-content: flex-start;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -webkit-flex-direction: column;
             -ms-flex-direction: column;
                 flex-direction: column;
-        border: 1px solid black;
+        border-left: 1px solid black;
         padding: 30px 0; }
         .section_one .container .wrapper .block_control .block_control_instruments {
           display: -webkit-box;
