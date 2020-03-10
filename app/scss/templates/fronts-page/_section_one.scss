@@ -1,6 +1,6 @@
 
 body{
-  background-image: url(/img/mountains-4743678.jpg);
+  background: url(../img/mountains-4743678.jpg);
   background-size: cover;
 }
 .section_one{
@@ -18,17 +18,25 @@ body{
       justify-content: center;
       width: 1000px;
       height: 600px;
-      background-color:rgb(255, 255, 255);
+      background-color:rgba(255, 255, 255, .6);
       flex-wrap: unset;
-      box-shadow: 10px 10px 20px rgb(0, 0, 0);
+      border-radius: 20px;
+      cursor: none;
        .block_canvas{
          width: 750px;
          height: 100%;
-         border-right: 1px solid black;
+         display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
          .canvas{
-           width: 100%;
-           height: 100%;
+           width: 650px;
+           height: 520px;
+           background-color:rgb(255, 255, 255);
+           box-shadow: 0 0 20px rgb(0, 0, 0);
+           border-radius: 20px;
            z-index: 9999;
+           cursor: url(../img/pen.png), pointer;
          }
        }
        .block_control{
@@ -38,9 +46,11 @@ body{
          align-items: center;
          justify-content: center;
          flex-direction: column;
-         border-left: 1px solid black;
          padding: 30px 0;
-         background-color: rgba(255, 255, 255, 0.3);
+         border-radius: 20px;
+         background-color: rgba(19,40, 117, 0.3);
+         box-shadow: 0 0 20px rgb(0, 0, 0);
+         cursor: pointer;
          .block_control_instruments{
            display: flex;
            flex-direction: row;
@@ -72,7 +82,7 @@ body{
                 box-shadow: 0 0 5px rgb(0, 0, 0);
                }
                i:active{
-                box-shadow: 0 0 5px rgb(247, 7, 7);
+                box-shadow: 0 0 10px rgb(3, 82, 250);
                }
             } 
          }
@@ -104,8 +114,9 @@ body{
           span{
             color: white;
             text-decoration: unset;
-            font-size: 20px;
-            font-weight: bolder ;
+            font-size: 25px;
+            font-weight: bolder;
+            transform: translateY(-10%);
           }
         }
         .size_value{
@@ -159,6 +170,9 @@ body{
          i:hover{
           box-shadow: 0 0 5px rgb(0, 0, 0);
          }
+         i:active{
+          box-shadow: 0 0 10px rgb(3, 82, 250);
+         }
        } 
        .block_button_clean{
          display: flex;
@@ -178,7 +192,9 @@ body{
          .btn_clean:hover{
           box-shadow: 0 0 5px rgb(0, 0, 0);
          }
-  
+         .btn_clean:active{
+          box-shadow: 0 0 10px rgb(3, 82, 250);
+         }
        }
    }
   }

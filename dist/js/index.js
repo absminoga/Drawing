@@ -3,7 +3,9 @@ class Canvas{
         this.canvas = document.querySelector('canvas');
         this.ctx = this.canvas.getContext('2d');
         this.draw = false;
-        
+
+        this.elements = document.querySelectorAll('p');
+
         this.btnPencil = document.querySelector('.fa-pencil-alt');
         this.btnHeart = document.querySelector('.fa-heart');
         this.btnCircle = document.querySelector('.fa-circle');
@@ -51,17 +53,19 @@ paintPicture(e){
     this.draw = true;
   this.canvas.onmousemove = (e) => {
     this.ctx.beginPath();
-    this.ctx.moveTo(this.getMousPosition(e).x,this.getMousPosition(e).y);
+    this.ctx.moveTo(this.getMousPosition(e).x - 1,this.getMousPosition(e).y - 0.5);
     if(this.draw){
       this.ctx.lineWidth = this.Cointer;
       this.ctx.strokeStyle = this.colorLine.value;
-      this.ctx.lineCap = 'square';
-      this.ctx.lineJoin = 'square';
+      this.ctx.lineCap = 'round';
+      this.ctx.lineJoin = 'round';
       this.ctx.lineTo(this.getMousPosition(e).x,this.getMousPosition(e).y);
       this.ctx.stroke();
     }
   };
-  this.canvas.onmouseup = (e) => this.draw = false;
+  this.canvas.onmouseup = (e) => {
+    this.canvas.onmousemove = null;
+  }
   };  
 }
 // ---------- Erasing picture ------------ 
@@ -87,6 +91,7 @@ paintPicture(e){
     this.ctx.beginPath();
     this.ctx.moveTo(this.getMousPosition(e).x,this.getMousPosition(e).y);
     if(this.draw){
+      this.ctx.lineWidth = 1;
       this.ctx.strokeStyle = this.colorLine.value;
       this.ctx.rect(this.getMousPosition(e).x, this.getMousPosition(e).y, this.Cointer*1.5, this.Cointer);
       this.ctx.stroke();
@@ -99,8 +104,10 @@ paintPicture(e){
       this.ctx.beginPath();
       this.ctx.moveTo(this.getMousPosition(e).x,this.getMousPosition(e).y);
       if(this.draw){
-        this.ctx.fillStyle = this.colorLine.value;
+        this.ctx.lineWidth = 2;
         this.ctx.arc(this.getMousPosition(e).x, this.getMousPosition(e).y, this.Cointer, 0, Math.PI*2, false);
+        this.ctx.fillStyle = this.colorLine.value;
+        this.ctx.strokeStyle = this.colorLine.value;
         this.ctx.fill();
         this.ctx.stroke();
       }

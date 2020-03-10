@@ -132,7 +132,7 @@ input {
   width: 100%; }
 
 body {
-  background-image: url(/img/mountains-4743678.jpg);
+  background: url(../img/mountains-4743678.jpg);
   background-size: cover; }
 
 .section_one {
@@ -172,20 +172,41 @@ body {
               justify-content: center;
       width: 1000px;
       height: 600px;
-      background-color: white;
+      background-color: rgba(255, 255, 255, 0.6);
       -webkit-flex-wrap: unset;
           -ms-flex-wrap: unset;
               flex-wrap: unset;
-      -webkit-box-shadow: 10px 10px 20px black;
-              box-shadow: 10px 10px 20px black; }
+      border-radius: 20px;
+      cursor: none; }
       .section_one .container .wrapper .block_canvas {
         width: 750px;
         height: 100%;
-        border-right: 1px solid black; }
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center; }
         .section_one .container .wrapper .block_canvas .canvas {
-          width: 100%;
-          height: 100%;
-          z-index: 9999; }
+          width: 650px;
+          height: 520px;
+          background-color: white;
+          -webkit-box-shadow: 0 0 20px black;
+                  box-shadow: 0 0 20px black;
+          border-radius: 20px;
+          z-index: 9999;
+          cursor: url(../img/pen.png), pointer; }
       .section_one .container .wrapper .block_control {
         width: 250px;
         height: 100%;
@@ -206,9 +227,12 @@ body {
         -webkit-flex-direction: column;
             -ms-flex-direction: column;
                 flex-direction: column;
-        border-left: 1px solid black;
         padding: 30px 0;
-        background-color: rgba(255, 255, 255, 0.3); }
+        border-radius: 20px;
+        background-color: rgba(19, 40, 117, 0.3);
+        -webkit-box-shadow: 0 0 20px black;
+                box-shadow: 0 0 20px black;
+        cursor: pointer; }
         .section_one .container .wrapper .block_control .block_control_instruments {
           display: -webkit-box;
           display: -webkit-flex;
@@ -261,8 +285,8 @@ body {
             .section_one .container .wrapper .block_control .block_control_instruments .instruments_pen i:active,
             .section_one .container .wrapper .block_control .block_control_instruments .instruments_brush i:active,
             .section_one .container .wrapper .block_control .block_control_instruments .instruments_eraser i:active {
-              -webkit-box-shadow: 0 0 5px #f70707;
-                      box-shadow: 0 0 5px #f70707; }
+              -webkit-box-shadow: 0 0 10px #0352fa;
+                      box-shadow: 0 0 10px #0352fa; }
       .section_one .container .wrapper .block_control_size {
         display: -webkit-box;
         display: -webkit-flex;
@@ -312,8 +336,11 @@ body {
           .section_one .container .wrapper .block_control_size .size_big span {
             color: white;
             text-decoration: unset;
-            font-size: 20px;
-            font-weight: bolder; }
+            font-size: 25px;
+            font-weight: bolder;
+            -webkit-transform: translateY(-10%);
+                -ms-transform: translateY(-10%);
+                    transform: translateY(-10%); }
         .section_one .container .wrapper .block_control_size .size_value {
           width: 50px;
           padding: 5px;
@@ -388,6 +415,9 @@ body {
         .section_one .container .wrapper .block_figure i:hover {
           -webkit-box-shadow: 0 0 5px black;
                   box-shadow: 0 0 5px black; }
+        .section_one .container .wrapper .block_figure i:active {
+          -webkit-box-shadow: 0 0 10px #0352fa;
+                  box-shadow: 0 0 10px #0352fa; }
       .section_one .container .wrapper .block_button_clean {
         display: -webkit-box;
         display: -webkit-flex;
@@ -422,5 +452,8 @@ body {
         .section_one .container .wrapper .block_button_clean .btn_clean:hover {
           -webkit-box-shadow: 0 0 5px black;
                   box-shadow: 0 0 5px black; }
+        .section_one .container .wrapper .block_button_clean .btn_clean:active {
+          -webkit-box-shadow: 0 0 10px #0352fa;
+                  box-shadow: 0 0 10px #0352fa; }
 
 /* ----------- Media ---------------*/
