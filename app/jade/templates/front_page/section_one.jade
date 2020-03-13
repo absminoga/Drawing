@@ -1,0 +1,32 @@
+.section_one
+    .container
+        .wrapper
+            .block_canvas
+                canvas.canvas
+            .block_control
+                .block_control_instruments
+                    p instruments
+                    .instruments_pen
+                        i.fas.fa-pencil-alt
+                    //- .instruments_brush
+                    //-     i.fas.fa-paint-brush
+                    .instruments_eraser
+                            i.fas.fa-eraser
+                .block_control_size
+                    p size
+                    .size_big.btn_down
+                        span -
+                    .size_value 1
+                    .size_big.btn_up
+                        span +
+                p.block_color color    
+                input(type='color' class="block_color_value")
+                .block_figure 
+                    p figure 
+                    //- i.far.fa-heart
+                    i.far.fa-circle
+                    i.far.fa-square
+                .block_button_clean
+                    .btn_clean clean
+                    
+                    
